@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btth2.conferencemanagement.MainController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('https://www.teodesk.com/wp-content/uploads/2018/01/meeting.jpg');" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnProfile" layoutX="-1.0" layoutY="49.0" mnemonicParsing="false" onAction="#setBtnProfile" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: transparent;" textFill="#994c00" underline="true" visible="false" />
+                        <Label layoutX="18.0" layoutY="14.0" text="CManagement" textFill="#994c00">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="btnLogin" layoutX="61.0" layoutY="49.0" mnemonicParsing="false" onAction="#setBtnLogin" style="-fx-background-color: transparent;" text="Đăng Nhập" textFill="#994c00" underline="true" />
+                        <Button fx:id="btnLogout" layoutX="64.0" layoutY="74.0" mnemonicParsing="false" onAction="#setBtnLogout" style="-fx-background-color: transparent;" text="Đăng Xuất" textFill="#994c00" underline="true" visible="false" />
+                        <Button fx:id="btnIntroduceMenu" layoutY="118.0" mnemonicParsing="false" onAction="#setBtnIntroduceMenu" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: transparent;" text="1. Giới thiệu" textFill="#994c00">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnListConfRegistered" layoutX="2.0" layoutY="178.0" mnemonicParsing="false" onAction="#setBtnListConfRegistered" style="-fx-background-color: transparent;" text="3. Hội nghị đã đăng ký" textFill="#994c00" visible="false">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnConferenceManagement" layoutX="2.0" layoutY="148.0" mnemonicParsing="false" onAction="#setBtnConferenceManagement" style="-fx-background-color: transparent;" text="2. Danh sách hội nghị" textFill="#994c00">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnUserManagement" layoutX="2.0" layoutY="178.0" mnemonicParsing="false" onAction="#setBtnUserManagement" style="-fx-background-color: transparent;" text="3. Quản lý user       " textFill="#994c00" visible="false">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children></Pane>
+            </left>
+            <center>
+                <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <Pane fx:id="paneProfile" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EFEBE9;" visible="false" BorderPane.alignment="CENTER">
+                        <children>
+                            <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="100.0" layoutY="14.0" style="-fx-background-color: transparent;" text="TRANG CÁ NHÂN" textFill="#994c00">
+                                <font>
+                                    <Font name="System Bold" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="36.0" layoutY="94.0" style="-fx-background-color: transparent;" text="Họ và tên:">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="nameProfile" layoutX="118.0" layoutY="88.0" prefHeight="37.0" prefWidth="240.0" />
+                            <Label layoutX="68.0" layoutY="150.0" style="-fx-background-color: transparent;" text="Email:">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="emailProfile" layoutX="118.0" layoutY="144.0" prefHeight="37.0" prefWidth="240.0" />
+                            <Button fx:id="btnEditProfile" layoutX="153.0" layoutY="312.0" mnemonicParsing="false" onAction="#setBtnEditProfile" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #994C00;" text="CHỈNH SỬA" textFill="WHITE" />
+                            <Label layoutX="36.0" layoutY="206.0" style="-fx-background-color: transparent;" text="Mật khẩu:">
+                                <font>
+                                   <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="9.0" layoutY="261.0" style="-fx-background-color: transparent;" text="Xác nhận MK:">
+                                <font>
+                                   <Font name="System Bold" size="16.0" />
+                                </font>
+                             </Label>
+                     <PasswordField fx:id="passwordProfile" layoutX="118.0" layoutY="200.0" prefHeight="37.0" prefWidth="240.0" />
+                     <PasswordField fx:id="confirmPassProfile" layoutX="118.0" layoutY="255.0" prefHeight="37.0" prefWidth="240.0" />
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneIntroduce" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EFEBE9;">
+                        <children>
+                            <Label layoutX="39.0" layoutY="14.0" style="-fx-background-color: transparent;" text="GIỚI THIỆU CHƯƠNG TRÌNH" textFill="#994c00">
+                                <font>
+                                    <Font name="System Bold" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="introduceLabel" layoutX="21.0" layoutY="49.0" prefHeight="91.0" prefWidth="358.0" style="-fx-background-color: transparent;" text="CManagement là phần mềm giúp người quản lý theo dõi, quản lý các hội nghị tổ chức và giúp người tham dự quản lý các hội nghị mình đăng ký." wrapText="true">
+                        <font>
+                           <Font size="14.0" />
+                        </font></Label>
+                     <Label layoutX="21.0" layoutY="152.0" text="Phiên bản: 1.0">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                     </Label>
+                        </children>
+                    </Pane>
+                    <Pane fx:id="paneListConference" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EFEBE9;" visible="false">
+                        <children>
+                            <CheckBox fx:id="sortConfFollowName" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#setSortConfFollowName" text="Tên" />
+                            <CheckBox fx:id="sortConfFollowRegistered" layoutX="70.0" layoutY="59.0" mnemonicParsing="false" onAction="#setSortConfFollowRegistered" text="Số lượng đã đăng ký" />
+                            <ListView fx:id="listConference" layoutX="4.0" layoutY="82.0" prefHeight="266.0" prefWidth="389.0" style="-fx-background-insets: 1px; -fx-cursor: hand; -fx-focus-traversable: false;" />
+
+                            <Group fx:id="groupListConf" visible="true">
+                                <Label layoutX="69.0" layoutY="14.0" style="-fx-background-color: transparent;" text="DANH SÁCH HỘI NGHỊ" textFill="#994c00">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </Group>
+
+                            <Group fx:id="groupRegistered" visible="false">
+                                <Label layoutX="66.0" layoutY="14.0" style="-fx-background-color: transparent;" text="HỘI NGHỊ ĐÃ ĐĂNG KÝ" textFill="#994c00">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </Group>
+
+                            <Group fx:id="groupConfManagement" visible="false">
+                                <Label layoutX="88.0" layoutY="14.0" style="-fx-background-color: transparent;" text="QUẢN LÝ HỘI NGHỊ" textFill="#994c00">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="addNewConf" layoutX="298.0" layoutY="59.0" mnemonicParsing="false" onAction="#setAddNewConf" prefHeight="19.0" prefWidth="72.0" style="-fx-background-color: transparent;" text="Thêm mới" textFill="#994c00" underline="true" />
+                            </Group>
+                            </children>
+                    </Pane>
+                    <Pane fx:id="paneUserManagement" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EFEBE9;" visible="false">
+                        <children>
+                            <ListView fx:id="listUser" layoutX="4.0" layoutY="82.0" prefHeight="266.0" prefWidth="389.0" style="-fx-background-insets: 1px; -fx-focus-traversable: false;" />
+                            <Label layoutX="114.0" layoutY="14.0" style="-fx-background-color: transparent;" text="QUẢN LÝ USER" textFill="#994c00">
+                                <font>
+                                    <Font name="System Bold" size="24.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="127.0" layoutY="371.0" style="-fx-background-color: transparent;" text="1712813 - NGUYỄN THANH TIẾN">
+                                <font>
+                                    <Font size="10.0" />
+                                </font>
+                            </Label>
+                     <CheckBox fx:id="sortUserFollowName" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" onAction="#setSortUserFollowName" text="Tên" />
+                     <CheckBox fx:id="sortUserFollowConf" layoutX="70.0" layoutY="59.0" mnemonicParsing="false" onAction="#setSortUserFollowConf" text="Số hội nghị tham dự" />
+                        </children>
+                    </Pane>
+                </StackPane>
+            </center></BorderPane>
+    </children>
+</AnchorPane>

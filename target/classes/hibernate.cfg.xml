@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/coferencemanagement</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Thanhtien250499</property>
+        <property name="hibernate.ejb.metamodel.population">disabled</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <mapping class="btth2.conferencemanagement.AccountEntity"/>
+        <mapping resource="AccountEntity.hbm.xml"/>
+        <mapping class="btth2.conferencemanagement.DiadiemtochucEntity"/>
+        <mapping resource="DiadiemtochucEntity.hbm.xml"/>
+        <mapping class="btth2.conferencemanagement.HoinghiEntity"/>
+        <mapping resource="HoinghiEntity.hbm.xml"/>
+        <mapping class="btth2.conferencemanagement.ThamduhoinghiEntity"/>
+        <mapping resource="ThamduhoinghiEntity.hbm.xml"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPaneListUserCell" prefHeight="98.0" prefWidth="350.0" style="-fx-background-color: #EFEBE9;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="idUserLabel" layoutX="14.0" layoutY="14.0" style="-fx-background-color: transparent;" text="ID: ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <Label fx:id="nameUserLabel" layoutX="90.0" layoutY="14.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Họ và tên: " />
+        <Label fx:id="emailUserLabel" layoutX="90.0" layoutY="41.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Email: " />
+        <Label fx:id="stateAccount" layoutX="90.0" layoutY="68.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: transparent;" text="Trạng thái: " />
+        <Button fx:id="btnEditState" layoutX="269.0" layoutY="33.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" style="-fx-background-color: #994C00;" text="CHẶN" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+    </children>
+</AnchorPane>

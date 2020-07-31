@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPaneListWaitCell" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #EFEBE9;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="idWaitLabel" layoutX="14.0" layoutY="14.0" style="-fx-background-color: transparent;" text="ID: ">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnAcceptWait" layoutX="112.0" layoutY="10.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="54.0" style="-fx-background-color: #994c00;" text="ĐỒNG Ý" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <Button fx:id="btnDeleteWait" layoutX="112.0" layoutY="46.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="54.0" style="-fx-background-color: #994c00;" text="XÓA" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Label fx:id="stateAfterAction" layoutX="14.0" layoutY="46.0" />
+    </children>
+</AnchorPane>

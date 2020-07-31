@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btth2.conferencemanagement.SignInSignUpController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('https://www.teodesk.com/wp-content/uploads/2018/01/meeting.jpg'); -fx-background-size: cover;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="18.0" layoutY="23.0" text="CManagement" textFill="#523d27">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children></Pane>
+            </left>
+            <center>
+                <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="logupPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                            <children>
+                                <Label layoutX="146.0" layoutY="34.0" style="-fx-background-color: #ffffff;" text="ĐĂNG KÝ">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inputUsernameLogup" layoutX="39.0" layoutY="78.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập tên đăng nhập" />
+                                <PasswordField fx:id="inputPasswordLogup" layoutX="39.0" layoutY="129.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập mật khẩu" />
+                                <PasswordField fx:id="confirmPassword" layoutX="39.0" layoutY="182.0" prefHeight="37.0" prefWidth="322.0" promptText="Xác nhận mật khẩu" />
+                                <TextField fx:id="inputNameLogup" layoutX="39.0" layoutY="237.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập tên" />
+                                <TextField fx:id="inputEmailLogup" layoutX="39.0" layoutY="289.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập email" />
+                                <Button fx:id="backButtonLogup" layoutX="261.0" layoutY="341.0" mnemonicParsing="false" onAction="#setBackButtonLogup" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #994c00;" text="QUAY LẠI" textFill="WHITE" />
+                                <Button fx:id="signupButtonLogup" layoutX="153.0" layoutY="341.0" mnemonicParsing="false" onAction="#setSignupButtonLogup" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #994c00;" text="ĐĂNG KÝ" textFill="WHITE" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="loginPane" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="125.0" layoutY="51.0" prefHeight="52.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF;" text="ĐĂNG NHẬP" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inputUsernameLogin" layoutX="39.0" layoutY="118.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập tên đăng nhập" />
+                                <PasswordField fx:id="inputPasswordLogin" layoutX="39.0" layoutY="182.0" prefHeight="37.0" prefWidth="322.0" promptText="Nhập mật khẩu" />
+                                <Button fx:id="loginButton" layoutX="100.0" layoutY="247.0" onAction="#setLoginButton" mnemonicParsing="false" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #994c00;" text="ĐĂNG NHẬP" textFill="WHITE" />
+                                <Label fx:id="logupLabel" layoutX="100.0" layoutY="326.0" onMouseClicked="#setLogupLabel" style="-fx-background-color: #FFFFFF;" text="Chưa có tài khoản? Đăng ký tài khoản!" textFill="#3464b2" underline="true" />
+                                <Button fx:id="backButtonLogin" layoutX="228.0" layoutY="247.0" mnemonicParsing="false" onAction="#setBackButtonLogin" prefHeight="34.0" prefWidth="94.0" style="-fx-background-color: #994c00;" text="QUAY LẠI" textFill="WHITE" />
+                            </children></Pane>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

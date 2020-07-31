@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPaneConferenceDetail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btth2.conferencemanagement.DetailConferenceController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="783.0" style="-fx-background-color: #EFEBE9;">
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="nameDetail" layoutX="22.0" layoutY="20.0" style="-fx-background-color: transparent;" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label fx:id="briefDescriptionDetail" layoutX="22.0" layoutY="48.0" style="-fx-background-color: transparent;" wrapText="true" />
+                  <Label fx:id="detailDescriptionDetail" layoutX="22.0" layoutY="185.0" prefWidth="546.0" style="-fx-background-color: transparent;" wrapText="true" />
+                  <Button fx:id="backButtonDetailConf" layoutX="500.0" layoutY="365.0" mnemonicParsing="false" onAction="#setBackButtonDetailConf" prefHeight="21.0" prefWidth="69.0" style="-fx-background-color: #994c00;" text="QUAY LẠI" textFill="WHITE" />
+                  <Button fx:id="registerButtonConf" layoutX="381.0" layoutY="365.0" mnemonicParsing="false" onAction="#setRegisterButtonConf" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #994c00;" text="ĐĂNG KÝ" textFill="WHITE" />
+                  <Button fx:id="editConfButton" layoutX="401.0" layoutY="365.0" mnemonicParsing="false" onAction="#setEditConfButton" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #994c00;" text="CHỈNH SỬA" textFill="WHITE" visible="false" />
+                  <Label fx:id="timeStart" layoutX="22.0" layoutY="76.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="timeEnd" layoutX="22.0" layoutY="103.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="locationConferenceDetail" layoutX="22.0" layoutY="157.0" prefHeight="17.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="maxAmountConf" layoutX="22.0" layoutY="130.0" style="-fx-background-color: transparent;" />
+                  <Label fx:id="amountRegistered" layoutX="239.0" layoutY="130.0" style="-fx-background-color: transparent;" />
+                  <Button fx:id="btnShowListParticipant" layoutX="14.0" layoutY="365.0" mnemonicParsing="false" onAction="#setBtnShowListParticipant" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: #994c00;" text="XEM DANH SÁCH THAM DỰ" textFill="WHITE" />
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imageConferenceDetail" fitHeight="160.0" fitWidth="160.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" />
+                  <ListView fx:id="listWaitAccept" layoutY="225.0" prefHeight="175.0" prefWidth="200.0" style="-fx-background-insets: 1px; -fx-focus-traversable: false;" visible="false" />
+                  <Label fx:id="titleListWait" layoutX="37.0" layoutY="200.0" text="Danh sách đợi xác nhận" visible="false" />
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="btth2.conferencemanagement.HoinghiEntity" table="hoinghi" schema="coferencemanagement">
+        <id name="idHoinghi">
+            <column name="id_hoinghi" sql-type="int"/>
+        </id>
+        <property name="ten">
+            <column name="ten" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="moTaNganGon">
+            <column name="mo_ta_ngan_gon" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="moTaChiTiet">
+            <column name="mo_ta_chi_tiet" sql-type="varchar(1000)" length="1000" not-null="true"/>
+        </property>
+        <property name="hinhAnh">
+            <column name="hinh_anh" sql-type="varchar(200)" length="200" not-null="true"/>
+        </property>
+        <property name="thoiGianBatDau">
+            <column name="thoi_gian_bat_dau" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="thoiGianKetThuc">
+            <column name="thoi_gian_ket_thuc" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="nguoiThamDu">
+            <column name="nguoi_tham_du" sql-type="int" not-null="true"/>
+        </property>
+        <property name="soLuongToiDa">
+            <column name="so_luong_toi_da" sql-type="int" not-null="true"/>
+        </property>
+        <property name="idDiadiemtochuc">
+            <column name="id_diadiemtochuc" sql-type="int"/>
+        </property>
+        <many-to-one name="diadiemtochucByIdDiadiemtochuc" class="btth2.conferencemanagement.DiadiemtochucEntity" insert="false" update="false">
+            <column name="id_diadiemtochuc"/>
+        </many-to-one>
+        <set name="thamduhoinghisByIdHoinghi" inverse="true">
+            <key>
+                <column name="id_hoinghi"/>
+            </key>
+            <one-to-many not-found="ignore" class="btth2.conferencemanagement.ThamduhoinghiEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

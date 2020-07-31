@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="btth2.conferencemanagement.AccountEntity" table="account" schema="coferencemanagement">
+        <id name="idAccount">
+            <column name="id_account" sql-type="int"/>
+        </id>
+        <property name="ten">
+            <column name="ten" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="role">
+            <column name="role" sql-type="int" not-null="true"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="int" not-null="true"/>
+        </property>
+        <property name="soHoiNghiThamDu">
+            <column name="so_hoi_nghi_tham_du" sql-type="int" not-null="true"/>
+        </property>
+        <set name="thamduhoinghisByIdAccount" inverse="true">
+            <key>
+                <column name="id_account"/>
+            </key>
+            <one-to-many not-found="ignore" class="btth2.conferencemanagement.ThamduhoinghiEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

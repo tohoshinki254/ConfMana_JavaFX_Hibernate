@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="btth2.conferencemanagement.DiadiemtochucEntity" table="diadiemtochuc" schema="coferencemanagement">
+        <id name="idDiadiemtochuc">
+            <column name="id_diadiemtochuc" sql-type="int"/>
+        </id>
+        <property name="ten">
+            <column name="ten" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="diaChi">
+            <column name="dia_chi" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="sucChua">
+            <column name="suc_chua" sql-type="int" not-null="true"/>
+        </property>
+        <set name="hoinghisByIdDiadiemtochuc" inverse="true">
+            <key>
+                <column name="id_diadiemtochuc"/>
+            </key>
+            <one-to-many not-found="ignore" class="btth2.conferencemanagement.HoinghiEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

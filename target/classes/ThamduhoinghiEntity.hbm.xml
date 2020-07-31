@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="btth2.conferencemanagement.ThamduhoinghiEntity" table="thamduhoinghi" schema="coferencemanagement">
+        <composite-id mapped="true" class="btth2.conferencemanagement.ThamduhoinghiEntityPK">
+            <key-property name="idAccount">
+                <column name="id_account" sql-type="int"/>
+            </key-property>
+            <key-property name="idHoinghi">
+                <column name="id_hoinghi" sql-type="int"/>
+            </key-property>
+        </composite-id>
+        <property name="isAccepted">
+            <column name="isAccepted" sql-type="int" not-null="true"/>
+        </property>
+        <property name="isDeleted">
+            <column name="isDeleted" sql-type="int" not-null="true"/>
+        </property>
+        <many-to-one name="accountByIdAccount" class="btth2.conferencemanagement.AccountEntity" insert="false" update="false">
+            <column name="id_account"/>
+        </many-to-one>
+        <many-to-one name="hoinghiByIdHoinghi" class="btth2.conferencemanagement.HoinghiEntity" insert="false" update="false">
+            <column name="id_hoinghi"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

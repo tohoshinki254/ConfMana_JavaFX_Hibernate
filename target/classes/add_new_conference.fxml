@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="692.0" style="-fx-background-color: #EFEBE9;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btth2.conferencemanagement.AddNewConferenceController">
+    <Label layoutX="269.0" layoutY="14.0" style="-fx-background-color: transparent;" text="THÊM HỘI NGHỊ" textFill="#994c00">
+        <font>
+            <Font name="System Bold" size="24.0" />
+        </font>
+    </Label>
+   <Label layoutX="14.0" layoutY="58.0" text="Tên hội nghị:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="103.0" text="Mô tả ngắn gọn:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="190.0" text="Mô tả chi tiết:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="nameOfNewConf" layoutX="151.0" layoutY="49.0" prefHeight="38.0" prefWidth="525.0" />
+   <TextArea fx:id="briefOfNewConf" layoutX="151.0" layoutY="94.0" prefHeight="38.0" prefWidth="525.0" />
+   <TextArea fx:id="detailOfNewConf" layoutX="151.0" layoutY="142.0" prefHeight="114.0" prefWidth="525.0" wrapText="true" />
+   <Label layoutX="14.0" layoutY="272.0" text="Thời gian bắt đầu:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="457.0" layoutY="272.0" text="Thời lượng (giờ):">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Label layoutX="14.0" layoutY="318.0" text="Địa điểm tổ chức:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="locationOfNewConf" layoutX="150.0" layoutY="309.0" prefHeight="38.0" prefWidth="525.0" />
+   <ComboBox fx:id="timeOfNewConf" layoutX="567.0" layoutY="263.0" prefHeight="38.0" prefWidth="110.0">
+   <items>
+      <FXCollections fx:factory="observableArrayList">
+         <Integer fx:value="1" />
+         <Integer fx:value="2" />
+         <Integer fx:value="3" />
+         <Integer fx:value="4" />
+         <Integer fx:value="5" />
+      </FXCollections>
+   </items>
+   </ComboBox>
+   <DatePicker fx:id="beginOfNewConf" layoutX="151.0" layoutY="263.0" prefHeight="38.0" prefWidth="160.0" />
+   <Button fx:id="btnConfirmNewConf" layoutX="480.0" layoutY="422.0" mnemonicParsing="false" onAction="#setBtnConfirmNewConf" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #994C00;" text="XÁC NHẬN" textFill="WHITE" />
+   <Button fx:id="btnBackNewConf" layoutX="584.0" layoutY="422.0" mnemonicParsing="false" onAction="#setBtnBackNewConf" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #994C00;" text="QUAY LẠI" textFill="WHITE" />
+   <TextArea fx:id="amountOfNewConf" layoutX="150.0" layoutY="354.0" prefHeight="38.0" prefWidth="160.0" />
+   <Label layoutX="14.0" layoutY="363.0" text="Số lượng tối đa:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="hourNewConf" layoutX="321.0" layoutY="263.0" prefHeight="38.0" prefWidth="39.0" />
+   <TextArea fx:id="minuteNewConf" layoutX="363.0" layoutY="263.0" prefHeight="38.0" prefWidth="39.0" />
+   <TextArea fx:id="secondNewConf" layoutX="404.0" layoutY="263.0" prefHeight="38.0" prefWidth="39.0" />
+   <TextArea fx:id="linkOfAddImage" editable="false" layoutX="400.0" layoutY="354.0" prefHeight="38.0" prefWidth="211.0" />
+   <Label layoutX="360.0" layoutY="363.0" text="Ảnh:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Button fx:id="fileChooserNew" layoutX="611.0" layoutY="354.0" mnemonicParsing="false" onAction="#setFileChooserNew" prefHeight="38.0" prefWidth="62.0" text="Chọn" />
+</AnchorPane>
